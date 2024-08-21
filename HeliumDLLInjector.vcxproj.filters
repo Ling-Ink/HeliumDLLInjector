@@ -12,11 +12,23 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
+    <Filter Include="imguifiledialog">
+      <UniqueIdentifier>{fa6df979-f0fa-4e4a-8b97-13f127dd1eda}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="imguifiledialog\dirent">
+      <UniqueIdentifier>{7beb496e-d49c-4ff8-abdf-8004a176f2c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="imguifiledialog\stb">
+      <UniqueIdentifier>{3a58feea-16f1-47bd-94cd-c300ed225c4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sources\injectDLL">
+      <UniqueIdentifier>{0e045ce1-2ef8-4d53-b809-93f31669cb40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sources\helium">
+      <UniqueIdentifier>{92da0e5a-42a5-4eb4-b276-1e9db428db8c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>sources</Filter>
-    </ClCompile>
     <ClCompile Include="include\imgui\imgui.cpp">
       <Filter>imgui</Filter>
     </ClCompile>
@@ -38,11 +50,17 @@
     <ClCompile Include="include\imgui\imgui_demo.cpp">
       <Filter>imgui</Filter>
     </ClCompile>
-    <ClCompile Include="helium.h">
+    <ClCompile Include="include\imguifiledialog\ImGuiFileDialog.cpp">
+      <Filter>imguifiledialog</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
       <Filter>sources</Filter>
     </ClCompile>
-    <ClCompile Include="helium.cpp">
-      <Filter>sources</Filter>
+    <ClCompile Include="src\injectDLL\InjectDLL.cpp">
+      <Filter>sources\injectDLL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\helium\helium.cpp">
+      <Filter>sources\helium</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -66,6 +84,27 @@
     </ClInclude>
     <ClInclude Include="include\imgui\imgui_impl_win32.h">
       <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="include\imguifiledialog\ImGuiFileDialog.h">
+      <Filter>imguifiledialog</Filter>
+    </ClInclude>
+    <ClInclude Include="include\imguifiledialog\ImGuiFileDialogConfig.h">
+      <Filter>imguifiledialog</Filter>
+    </ClInclude>
+    <ClInclude Include="include\imguifiledialog\dirent\dirent.h">
+      <Filter>imguifiledialog\dirent</Filter>
+    </ClInclude>
+    <ClInclude Include="include\imguifiledialog\stb\stb_image.h">
+      <Filter>imguifiledialog\stb</Filter>
+    </ClInclude>
+    <ClInclude Include="include\imguifiledialog\stb\stb_image_resize2.h">
+      <Filter>imguifiledialog\stb</Filter>
+    </ClInclude>
+    <ClInclude Include="src\injectDLL\injectDLL.h">
+      <Filter>sources\injectDLL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\helium\helium.h">
+      <Filter>sources\helium</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

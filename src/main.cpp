@@ -5,7 +5,7 @@
 #include <tchar.h>
 #include <string>
 
-#include "helium.h"
+#include "helium/helium.h"
 
 // Data
 static ID3D11Device*            g_pd3dDevice            = nullptr;
@@ -23,13 +23,14 @@ void CleanupRenderTarget();
 LRESULT WINAPI WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
 
 // Main code
-int WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
+int main(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
     // Create application window
     //ImGui_ImplWin32_EnableDpiAwareness();
     WNDCLASSEXW wc = { sizeof(wc), CS_CLASSDC, WndProc, 0L, 0L, GetModuleHandle(nullptr), nullptr, nullptr, nullptr, nullptr, L"ImGui Example", nullptr };
     ::RegisterClassExW(&wc);
     HWND hwnd = ::CreateWindowW(wc.lpszClassName, L"HeliumDLLInjector", WS_POPUP, 0, 0, 2560, 1440, nullptr, nullptr, wc.hInstance, nullptr);
+    ::SetWindowPos(hwnd, HWND_TOPMOST, 0, 0, 100, 100, SWP_NOSIZE);
 
     // Initialize Direct3D
     if (!CreateDeviceD3D(hwnd))
@@ -51,7 +52,12 @@ int WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int n
     io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;      // Enable Gamepad Controls
     io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;         // Enable Docking
     io.ConfigFlags |= ImGuiConfigFlags_ViewportsEnable;       // Enable Multi-Viewport / Platform Windows
+    io.ConfigFlags |= ImGuiWindowFlags_NoSavedSettings;
     io.ConfigViewportsNoAutoMerge = true;
+
+    // Set window size
+    ImGui::SetNextWindowSize(ImVec2(1600.f, 200.f));
+    ImGui::SetNextWindowFocus();
 
     // Setup Dear ImGui style
     ImGui::StyleColorsDark();
