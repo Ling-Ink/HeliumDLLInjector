@@ -16,7 +16,10 @@ namespace Helium {
 
 	void RenderUI() {
         // Create window
-        ImGui::Begin("HeliumDLLInjector", NULL, ImGuiWindowFlags_NoBringToFrontOnFocus);
+        ImGui::Begin("HeliumDLLInjector", NULL, ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoBringToFrontOnFocus);
+        // Set Window Size
+        ImGui::SetWindowSize(ImVec2(400.f, 140.f));
+        ImGui::SetNextWindowSize(ImVec2(600.f, 400.f));
         // Quit button
         ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0.93f, 0.32f, 0.31f, 1));
         ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImVec4(1, 0, 0, 1));
