@@ -1,6 +1,6 @@
 [submodule "include/imgui"]
 	path = include/imgui
-	url = https://github.com/Ling-Ink/dependency-imgui.git
+	url = https://github.com/ColdDust-Dependencies/ImGui.git
 [submodule "include/imguifiledialog"]
 	path = include/imguifiledialog
-	url = https://github.com/Ling-Ink/dependency-imguifiledialog.git
+	url = https://github.com/ColdDust-Dependencies/ImGuiFileDialog.git
